@@ -1,0 +1,5 @@
+this project is being made for a greener and cleaner future,the purpose of this project is to develop a solution for any and every street lamp across the world,
+IR sensors are used for the purpose so that if someone wants to demonstrate the proof of concept so He/She may be able to demonstrate,the main sensor to be used is microwave proximity sensor but the logic will reain same.
+the logic presented is for a double lane system in which one side of the road is reffered to as road1 and the otherside as road2.
+three leds are clubbed togather so as to make a single arduino pin for controlling three of them,and the sensors are place so as to save the usage of one sensor by putting it before and after the led segment.
+the logic developed in this code is only functional for one vehicle system.
