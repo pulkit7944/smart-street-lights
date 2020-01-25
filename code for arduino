@@ -1,0 +1,58 @@
+
+const int irsensor4 = 11,irsensor3=10,irsensor2=8,irsensor1=9;
+int ledsegment1=3, ledsegment2=6,ledsegment3=5 ,ledsegment4=4 ;
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(irsensor1,INPUT);
+pinMode(irsensor2,INPUT);
+pinMode(irsensor3,INPUT);
+pinMode(irsensor4,INPUT);
+pinMode(ledsegment1,OUTPUT);
+pinMode(ledsegment2,OUTPUT);
+pinMode(ledsegment3,OUTPUT);
+pinMode(ledsegment4,OUTPUT);
+
+Serial.begin(9600);
+}
+void road1(){
+  
+if (digitalRead(irsensor1)==LOW){
+  
+     while(digitalRead(irsensor2)==HIGH){
+     digitalWrite(ledsegment1,HIGH);
+     if (digitalRead(irsensor2)==LOW){Serial.print("sensor on");
+    while(irsensor1==HIGH){
+    digitalWrite(ledsegment2,HIGH);
+    }}}}   
+    
+void road2(){
+  if (digitalRead(irsensor4)==LOW){
+    Serial.print("\n led 3 is high");
+    while(digitalRead(irsensor3)!=LOW){
+      digitalWrite(ledsegment3,HIGH);
+       if (digitalRead(irsensor3)==LOW){Serial.print("sensor 3 on");
+    while(irsensor4==HIGH){
+    digitalWrite(ledsegment4,HIGH);
+    }}}
+void loop() {
+  // led 1 and 2 will work togather
+//led 3 and 4 will work togather
+//sensor1 and sensor2 will work in sync
+//sensor 3 and 4 will work in sync
+Serial.print(digitalRead(irsensor1));
+Serial.print(" \n");
+Serial.print(digitalRead(irsensor2));
+Serial.print(" \n");
+Serial.print(digitalRead(irsensor3));
+Serial.print(" \n");
+Serial.print(digitalRead(irsensor4));
+Serial.print(" \n");
+ 
+ 
+ road1();
+ road2() ; 
+    
+}
